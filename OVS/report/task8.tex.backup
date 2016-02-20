@@ -1,0 +1,22 @@
+\section*{Task~8}
+An easy way to make the program crash is by constructing an string for the name of an address book entry element such that it will be executed when displayed in \texttt{print_addr}:
+
+\begin{lstlisting}
+int main (int argc, char **argv)
+{
+  /* list initialisation */
+  struct list *list = list_new ();
+  if (!list) { abort(); }
+  (...)
+  struct address *address1 = malloc (sizeof(struct address));
+  if(!address1) { printf("failed to allocate memory for an address element\n"); abort(); }
+  address1->name    = "%n %n %n %n";
+  address1->address = "test address";
+  address1->phone   = "0123456789";
+  
+  list_append(list, address1);
+  list_addrs (list);
+
+  (...)
+}
+\end{lstlisting}

@@ -1,0 +1,1166 @@
+file addrbook.c: Parsing
+Converting
+Type-checking addrbook
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+**** WARNING: no body for function c::ioctl
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::input_addr.0 iteration 1 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 2 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 3 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 4 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 5 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 6 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 7 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 8 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 9 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 10 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 11 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 12 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 13 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 14 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 15 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.1 iteration 1 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.1 iteration 2 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 1 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 2 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 3 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 4 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 5 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 6 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 7 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 8 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 9 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 10 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 11 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 12 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 13 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 14 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 15 file addrbook.c line 286 function input_addr
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::input_addr.3 iteration 1 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 2 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 3 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 4 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 5 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 6 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 7 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 8 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 9 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 10 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 11 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 12 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 13 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 14 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 15 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.4 iteration 1 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.4 iteration 2 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 1 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 2 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 3 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 4 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 5 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 6 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 7 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 8 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 9 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 10 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 11 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 12 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 13 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 14 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 15 file addrbook.c line 287 function input_addr
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::input_addr.6 iteration 1 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 2 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 3 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 4 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 5 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 6 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 7 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 8 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 9 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 10 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 11 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 12 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 13 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 14 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 15 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.7 iteration 1 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.7 iteration 2 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 1 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 2 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 3 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 4 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 5 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 6 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 7 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 8 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 9 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 10 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 11 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 12 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 13 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 14 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 15 file addrbook.c line 288 function input_addr
+Unwinding loop c::list_addrs.0 iteration 1 file addrbook.c line 327 function list_addrs
+Unwinding loop c::list_addrs.0 iteration 2 file addrbook.c line 327 function list_addrs
+Unwinding loop c::list_addrs.0 iteration 3 file addrbook.c line 327 function list_addrs
+Unwinding loop c::list_addrs.0 iteration 4 file addrbook.c line 327 function list_addrs
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::del_addr.0 iteration 1 file addrbook.c line 354 function del_addr
+Unwinding loop c::del_addr.0 iteration 2 file addrbook.c line 354 function del_addr
+Unwinding loop c::del_addr.0 iteration 3 file addrbook.c line 354 function del_addr
+Unwinding loop c::del_addr.0 iteration 4 file addrbook.c line 354 function del_addr
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+**** WARNING: no body for function c::strcasestr
+Unwinding loop c::search_addr.0 iteration 1 file addrbook.c line 391 function search_addr
+Unwinding loop c::search_addr.0 iteration 2 file addrbook.c line 391 function search_addr
+Unwinding loop c::search_addr.0 iteration 3 file addrbook.c line 391 function search_addr
+Unwinding loop c::search_addr.0 iteration 4 file addrbook.c line 391 function search_addr
+Unwinding loop c::main.0 iteration 1 file addrbook.c line 431 function main
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::input_addr.0 iteration 1 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 2 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 3 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 4 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 5 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 6 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 7 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 8 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 9 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 10 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 11 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 12 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 13 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 14 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.0 iteration 15 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.1 iteration 1 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.1 iteration 2 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 1 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 2 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 3 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 4 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 5 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 6 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 7 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 8 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 9 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 10 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 11 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 12 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 13 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 14 file addrbook.c line 286 function input_addr
+Unwinding loop c::input_addr.2 iteration 15 file addrbook.c line 286 function input_addr
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::input_addr.3 iteration 1 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 2 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 3 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 4 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 5 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 6 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 7 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 8 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 9 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 10 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 11 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 12 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 13 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 14 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.3 iteration 15 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.4 iteration 1 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.4 iteration 2 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 1 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 2 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 3 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 4 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 5 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 6 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 7 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 8 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 9 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 10 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 11 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 12 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 13 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 14 file addrbook.c line 287 function input_addr
+Unwinding loop c::input_addr.5 iteration 15 file addrbook.c line 287 function input_addr
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::input_addr.6 iteration 1 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 2 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 3 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 4 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 5 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 6 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 7 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 8 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 9 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 10 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 11 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 12 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 13 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 14 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.6 iteration 15 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.7 iteration 1 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.7 iteration 2 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 1 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 2 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 3 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 4 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 5 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 6 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 7 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 8 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 9 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 10 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 11 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 12 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 13 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 14 file addrbook.c line 288 function input_addr
+Unwinding loop c::input_addr.8 iteration 15 file addrbook.c line 288 function input_addr
+Unwinding loop c::list_addrs.0 iteration 1 file addrbook.c line 327 function list_addrs
+Unwinding loop c::list_addrs.0 iteration 2 file addrbook.c line 327 function list_addrs
+Unwinding loop c::list_addrs.0 iteration 3 file addrbook.c line 327 function list_addrs
+Unwinding loop c::list_addrs.0 iteration 4 file addrbook.c line 327 function list_addrs
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::del_addr.0 iteration 1 file addrbook.c line 354 function del_addr
+Unwinding loop c::del_addr.0 iteration 2 file addrbook.c line 354 function del_addr
+Unwinding loop c::del_addr.0 iteration 3 file addrbook.c line 354 function del_addr
+Unwinding loop c::del_addr.0 iteration 4 file addrbook.c line 354 function del_addr
+Unwinding loop c::input.0 iteration 1 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 2 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 3 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 4 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 5 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 6 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 7 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 8 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 9 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 10 file addrbook.c line 70 function input
+Unwinding loop c::input.0 iteration 11 file addrbook.c line 70 function input
+Unwinding loop c::search_addr.0 iteration 1 file addrbook.c line 391 function search_addr
+Unwinding loop c::search_addr.0 iteration 2 file addrbook.c line 391 function search_addr
+Unwinding loop c::search_addr.0 iteration 3 file addrbook.c line 391 function search_addr
+Unwinding loop c::search_addr.0 iteration 4 file addrbook.c line 391 function search_addr
+Unwinding loop c::main.0 iteration 2 file addrbook.c line 431 function main
+Unwinding loop c::list_release.0 iteration 1 file addrbook.c line 241 function list_release
+Unwinding loop c::list_release.0 iteration 2 file addrbook.c line 241 function list_release
+Unwinding loop c::list_release.0 iteration 3 file addrbook.c line 241 function list_release
+Unwinding loop c::list_release.0 iteration 4 file addrbook.c line 241 function list_release
+size of program expression: 11991 assignments
+simple slicing removed 2 assignments
+Generated 272 VCC(s), 272 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT2 without simplifier
+1729027 variables, 5852264 clauses
+SAT checker: negated claim is SATISFIABLE, i.e., does not hold
+Runtime decision procedure: 17.792s
+Building error trace
+
+Counterexample:
+
+State 2 file /usr/include/unistd.h line 540 thread 0
+----------------------------------------------------
+  __environ=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 3 file /usr/include/unistd.h line 542 thread 0
+----------------------------------------------------
+  environ=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 4 file <built-in> line 23 thread 0
+----------------------------------------------------
+  __CPROVER_memory=(assignment removed)
+
+State 5 file <built-in> line 25 thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 6 file <built-in> line 26 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 7 file <built-in> line 27 thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 8 file <built-in> line 36 thread 0
+----------------------------------------------------
+  __CPROVER_rounding_mode=0 (00000000000000000000000000000000)
+
+State 9 file addrbook.c line 66 function input thread 0
+----------------------------------------------------
+  input::1::buf={ 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 10 file /usr/include/getopt.h line 59 thread 0
+----------------------------------------------------
+  optarg=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 11 file /usr/include/getopt.h line 73 thread 0
+----------------------------------------------------
+  optind=0 (00000000000000000000000000000000)
+
+State 12 file /usr/include/getopt.h line 78 thread 0
+----------------------------------------------------
+  opterr=0 (00000000000000000000000000000000)
+
+State 13 file /usr/include/getopt.h line 82 thread 0
+----------------------------------------------------
+  optopt=0 (00000000000000000000000000000000)
+
+State 14 file addrbook.c line 14 thread 0
+----------------------------------------------------
+  counter=0 (00000000000000000000000000000000)
+
+State 15 file /usr/include/stdio.h line 165 thread 0
+----------------------------------------------------
+  stdin=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 16 file /usr/include/stdio.h line 166 thread 0
+----------------------------------------------------
+  stdout=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 17 file /usr/include/stdio.h line 167 thread 0
+----------------------------------------------------
+  stderr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 18 file /usr/include/bits/sys_errlist.h line 27 thread 0
+----------------------------------------------------
+  sys_nerr=0 (00000000000000000000000000000000)
+
+State 19 file /usr/include/bits/sys_errlist.h line 31 thread 0
+----------------------------------------------------
+  _sys_nerr=0 (00000000000000000000000000000000)
+
+State 22  thread 0
+----------------------------------------------------
+  c::argv'=(assignment removed)
+
+State 24  thread 0
+----------------------------------------------------
+  main::argc=33554433 (00000010000000000000000000000001)
+
+State 25  thread 0
+----------------------------------------------------
+  main::argv=&argv[0] (0000110100000000000000000000000000000000000000000000000000000000)
+
+State 26 file addrbook.c line 412 function main thread 0
+----------------------------------------------------
+  main::1::list=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 27 file addrbook.c line 413 function main thread 0
+----------------------------------------------------
+  main::1::c=0 (00000000)
+
+State 28 file addrbook.c line 416 function main thread 0
+----------------------------------------------------
+  main::1::teller=1 (00000000000000000000000000000001)
+
+State 30 file addrbook.c line 421 function main thread 0
+----------------------------------------------------
+  main::1::newT={ .c_iflag=0, .c_oflag=0, .c_cflag=0, .c_lflag=0, .c_line=0,
+    .c_cc={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, .$pad0=0,
+    .c_ispeed=0, .c_ospeed=0 } ({ 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000, { 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 }, 000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000 })
+
+State 31 file addrbook.c line 422 function main thread 0
+----------------------------------------------------
+  main::1::newT={ .c_iflag=0, .c_oflag=0, .c_cflag=0, .c_lflag=0, .c_line=0,
+    .c_cc={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, .$pad0=0,
+    .c_ispeed=0, .c_ospeed=0 } ({ 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000, { 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 }, 000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000 })
+
+State 32 file addrbook.c line 423 function main thread 0
+----------------------------------------------------
+  main::1::newT={ .c_iflag=0, .c_oflag=0, .c_cflag=0, .c_lflag=0, .c_line=0,
+    .c_cc={ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }, .$pad0=0,
+    .c_ispeed=0, .c_ospeed=0 } ({ 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000, 00000000, { 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000, 00000000 }, 000000000000000000000000, 00000000000000000000000000000000, 00000000000000000000000000000000 })
+
+State 36 file addrbook.c line 107 function list_new thread 0
+----------------------------------------------------
+  my_malloc::s=16 (0000000000000000000000000000000000000000000000000000000000010000)
+
+State 37 file addrbook.c line 18 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_nondet_bool$1=TRUE (1)
+
+State 40 file addrbook.c line 18 function my_malloc thread 0
+----------------------------------------------------
+  c::list_new::$tmp::return_value_my_malloc$1=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 41 file addrbook.c line 107 function list_new thread 0
+----------------------------------------------------
+  list_new::1::list=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 44 file addrbook.c line 108 function list_new thread 0
+----------------------------------------------------
+  main::1::list=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 47 file addrbook.c line 433 function main thread 0
+----------------------------------------------------
+  main::1::teller=2 (00000000000000000000000000000010)
+a: add; l: list; d: delete; s: search; q: quit
+
+
+State 51 file addrbook.c line 435 function main thread 0
+----------------------------------------------------
+  c::main::$tmp::return_value_getchar$1=49 (00000000000000000000000000110001)
+
+State 53 file addrbook.c line 435 function main thread 0
+----------------------------------------------------
+  main::1::c=49 (00110001)
+%c
+
+
+State 64 file addrbook.c line 433 function main thread 0
+----------------------------------------------------
+  main::1::teller=3 (00000000000000000000000000000011)
+a: add; l: list; d: delete; s: search; q: quit
+
+
+State 68 file addrbook.c line 435 function main thread 0
+----------------------------------------------------
+  c::main::$tmp::return_value_getchar$1=97 (00000000000000000000000001100001)
+
+State 70 file addrbook.c line 435 function main thread 0
+----------------------------------------------------
+  main::1::c=97 (01100001)
+%c
+
+
+State 75 file addrbook.c line 282 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::address=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 76 file addrbook.c line 283 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::name=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 77 file addrbook.c line 283 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::addr=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 78 file addrbook.c line 283 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::phone=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+name: 
+
+State 81 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  input::n=5 (00000000000000000000000000000101)
+
+State 82 file addrbook.c line 67 function input thread 0
+----------------------------------------------------
+  input::1::c=0 (00000000)
+
+State 83 file addrbook.c line 68 function input thread 0
+----------------------------------------------------
+  input::1::i=0 (00000000000000000000000000000000)
+
+State 89 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=0 (00000000000000000000000000000000)
+
+State 91 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=0 (00000000)
+%c
+
+State 94 file addrbook.c line 75 function input thread 0
+----------------------------------------------------
+  input::1::buf={ 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 95 file addrbook.c line 76 function input thread 0
+----------------------------------------------------
+  input::1::i=1 (00000000000000000000000000000001)
+
+State 102 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=10 (00000000000000000000000000001010)
+
+State 104 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=10 (00001010)
+%c
+
+State 109 file addrbook.c line 80 function input thread 0
+----------------------------------------------------
+  input::1::buf={ 0, 0, 0, 0, 0 } ({ 00000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 111 file addrbook.c line 82 function input thread 0
+----------------------------------------------------
+  input_addr::1::tmp=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 113 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  strlen::s=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 114 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 116 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_strlen$2=0 (0000000000000000000000000000000000000000000000000000000000000000)
+abort (y/n)? 
+
+State 120 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::1::1::1::c=0 (00000000)
+
+State 125 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_getchar$1=110 (00000000000000000000000001101110)
+
+State 127 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::1::1::1::c=110 (01101110)
+%c
+
+State 136 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  my_malloc::s=5 (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 137 file addrbook.c line 18 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_nondet_bool$1=FALSE (0)
+
+State 139 file addrbook.c line 20 function my_malloc thread 0
+----------------------------------------------------
+  counter=1 (00000000000000000000000000000001)
+
+State 141 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::malloc_size=5 (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 142 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::1::res=&dynamic_object7[0] (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 143 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 144 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 145 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 146 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_malloc$2=&dynamic_object7[0] (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 149 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_my_malloc$3=&dynamic_object7[0] (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 150 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::name=&dynamic_object7[0] (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 153 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  strcpy::dst=&dynamic_object7[0] (0000100000000000000000000000000000000000000000000000000000000000)
+
+State 154 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  strcpy::src=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 155 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 156 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=0 (00000000)
+
+State 157 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object7={ 0, 0, 0, 64, 0 } ({ 00000000, 00000000, 00000000, 01000000, 00000000 })
+
+State 158 file addrbook.c line 286 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+address: 
+
+State 163 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  input::n=5 (00000000000000000000000000000101)
+
+State 164 file addrbook.c line 67 function input thread 0
+----------------------------------------------------
+  input::1::c=0 (00000000)
+
+State 165 file addrbook.c line 68 function input thread 0
+----------------------------------------------------
+  input::1::i=0 (00000000000000000000000000000000)
+
+State 171 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=128 (00000000000000000000000010000000)
+
+State 173 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=-128 (10000000)
+%c
+
+State 176 file addrbook.c line 75 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 0, 0, 0, 0 } ({ 10000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 177 file addrbook.c line 76 function input thread 0
+----------------------------------------------------
+  input::1::i=1 (00000000000000000000000000000001)
+
+State 184 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=64 (00000000000000000000000001000000)
+
+State 186 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=64 (01000000)
+%c
+
+State 189 file addrbook.c line 75 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 64, 0, 0, 0 } ({ 10000000, 01000000, 00000000, 00000000, 00000000 })
+
+State 190 file addrbook.c line 76 function input thread 0
+----------------------------------------------------
+  input::1::i=2 (00000000000000000000000000000010)
+
+State 197 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=10 (00000000000000000000000000001010)
+
+State 199 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=10 (00001010)
+%c
+
+State 204 file addrbook.c line 80 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 64, 0, 0, 0 } ({ 10000000, 01000000, 00000000, 00000000, 00000000 })
+
+State 206 file addrbook.c line 82 function input thread 0
+----------------------------------------------------
+  input_addr::1::tmp=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 208 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strlen::s=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 209 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 211 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 214 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 217 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_strlen$5=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 221 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  my_malloc::s=5 (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 222 file addrbook.c line 18 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_nondet_bool$1=FALSE (0)
+
+State 224 file addrbook.c line 20 function my_malloc thread 0
+----------------------------------------------------
+  counter=2 (00000000000000000000000000000010)
+
+State 226 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::malloc_size=5 (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 227 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::1::res=&dynamic_object8[0] (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 228 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 229 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 230 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 231 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_malloc$2=&dynamic_object8[0] (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 234 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_my_malloc$6=&dynamic_object8[0] (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 235 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::addr=&dynamic_object8[0] (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 238 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::dst=&dynamic_object8[0] (0000100100000000000000000000000000000000000000000000000000000000)
+
+State 239 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::src=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 240 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 241 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=-128 (10000000)
+
+State 242 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object8={ -128, 0, 0, 0, 0 } ({ 10000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 243 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 245 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=64 (01000000)
+
+State 246 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object8={ -128, 64, 0, 0, 0 } ({ 10000000, 01000000, 00000000, 00000000, 00000000 })
+
+State 247 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 249 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=0 (00000000)
+
+State 250 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object8={ -128, 64, 0, 0, 0 } ({ 10000000, 01000000, 00000000, 00000000, 00000000 })
+
+State 251 file addrbook.c line 287 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=3 (0000000000000000000000000000000000000000000000000000000000000011)
+phone: 
+
+State 256 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  input::n=5 (00000000000000000000000000000101)
+
+State 257 file addrbook.c line 67 function input thread 0
+----------------------------------------------------
+  input::1::c=0 (00000000)
+
+State 258 file addrbook.c line 68 function input thread 0
+----------------------------------------------------
+  input::1::i=0 (00000000000000000000000000000000)
+
+State 264 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=128 (00000000000000000000000010000000)
+
+State 266 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=-128 (10000000)
+%c
+
+State 269 file addrbook.c line 75 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 64, 0, 0, 0 } ({ 10000000, 01000000, 00000000, 00000000, 00000000 })
+
+State 270 file addrbook.c line 76 function input thread 0
+----------------------------------------------------
+  input::1::i=1 (00000000000000000000000000000001)
+
+State 277 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=4 (00000000000000000000000000000100)
+
+State 279 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=4 (00000100)
+%c
+
+State 282 file addrbook.c line 75 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 4, 0, 0, 0 } ({ 10000000, 00000100, 00000000, 00000000, 00000000 })
+
+State 283 file addrbook.c line 76 function input thread 0
+----------------------------------------------------
+  input::1::i=2 (00000000000000000000000000000010)
+
+State 290 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=1 (00000000000000000000000000000001)
+
+State 292 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=1 (00000001)
+%c
+
+State 295 file addrbook.c line 75 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 4, 1, 0, 0 } ({ 10000000, 00000100, 00000001, 00000000, 00000000 })
+
+State 296 file addrbook.c line 76 function input thread 0
+----------------------------------------------------
+  input::1::i=3 (00000000000000000000000000000011)
+
+State 303 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  c::input::$tmp::return_value_getchar$1=1 (00000000000000000000000000000001)
+
+State 305 file addrbook.c line 72 function input thread 0
+----------------------------------------------------
+  input::1::c=1 (00000001)
+%c
+
+State 308 file addrbook.c line 75 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 4, 1, 1, 0 } ({ 10000000, 00000100, 00000001, 00000001, 00000000 })
+
+State 309 file addrbook.c line 76 function input thread 0
+----------------------------------------------------
+  input::1::i=4 (00000000000000000000000000000100)
+
+State 314 file addrbook.c line 80 function input thread 0
+----------------------------------------------------
+  input::1::buf={ -128, 4, 1, 1, 0 } ({ 10000000, 00000100, 00000001, 00000001, 00000000 })
+
+State 316 file addrbook.c line 82 function input thread 0
+----------------------------------------------------
+  input_addr::1::tmp=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 318 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strlen::s=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 319 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 321 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 324 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 327 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 330 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strlen::1::len=4 (0000000000000000000000000000000000000000000000000000000000000100)
+
+State 333 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_strlen$8=4 (0000000000000000000000000000000000000000000000000000000000000100)
+
+State 337 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  my_malloc::s=5 (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 338 file addrbook.c line 18 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_nondet_bool$1=FALSE (0)
+
+State 340 file addrbook.c line 20 function my_malloc thread 0
+----------------------------------------------------
+  counter=3 (00000000000000000000000000000011)
+
+State 342 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::malloc_size=5 (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 343 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::1::res=&dynamic_object9[0] (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 344 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 345 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 346 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 347 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_malloc$2=&dynamic_object9[0] (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 350 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_my_malloc$9=&dynamic_object9[0] (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 351 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::phone=&dynamic_object9[0] (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 354 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::dst=&dynamic_object9[0] (0000101000000000000000000000000000000000000000000000000000000000)
+
+State 355 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::src=&buf[0] (0000111000000000000000000000000000000000000000000000000000000000)
+
+State 356 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 357 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=-128 (10000000)
+
+State 358 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object9={ -128, 0, 0, 0, 0 } ({ 10000000, 00000000, 00000000, 00000000, 00000000 })
+
+State 359 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=1 (0000000000000000000000000000000000000000000000000000000000000001)
+
+State 361 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=4 (00000100)
+
+State 362 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object9={ -128, 4, 0, 0, 0 } ({ 10000000, 00000100, 00000000, 00000000, 00000000 })
+
+State 363 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=2 (0000000000000000000000000000000000000000000000000000000000000010)
+
+State 365 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=1 (00000001)
+
+State 366 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object9={ -128, 4, 1, 0, 0 } ({ 10000000, 00000100, 00000001, 00000000, 00000000 })
+
+State 367 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=3 (0000000000000000000000000000000000000000000000000000000000000011)
+
+State 369 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=1 (00000001)
+
+State 370 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object9={ -128, 4, 1, 1, 0 } ({ 10000000, 00000100, 00000001, 00000001, 00000000 })
+
+State 371 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=4 (0000000000000000000000000000000000000000000000000000000000000100)
+
+State 373 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::ch=0 (00000000)
+
+State 374 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object9={ -128, 4, 1, 1, 0 } ({ 10000000, 00000100, 00000001, 00000001, 00000000 })
+
+State 375 file addrbook.c line 288 function input_addr thread 0
+----------------------------------------------------
+  strcpy::1::i=5 (0000000000000000000000000000000000000000000000000000000000000101)
+
+State 379 file addrbook.c line 291 function input_addr thread 0
+----------------------------------------------------
+  my_malloc::s=24 (0000000000000000000000000000000000000000000000000000000000011000)
+
+State 380 file addrbook.c line 18 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_nondet_bool$1=FALSE (0)
+
+State 382 file addrbook.c line 20 function my_malloc thread 0
+----------------------------------------------------
+  counter=4 (00000000000000000000000000000100)
+
+State 384 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::malloc_size=24 (0000000000000000000000000000000000000000000000000000000000011000)
+
+State 385 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  malloc::1::res=&dynamic_object10.name (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 386 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_deallocated=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 387 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_object=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 388 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  __CPROVER_malloc_size=0 (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 389 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::my_malloc::$tmp::return_value_malloc$2=&dynamic_object10.name (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 392 file addrbook.c line 21 function my_malloc thread 0
+----------------------------------------------------
+  c::input_addr::$tmp::return_value_my_malloc$10=&dynamic_object10.name (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 393 file addrbook.c line 291 function input_addr thread 0
+----------------------------------------------------
+  input_addr::1::address=&dynamic_object10.name (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 395 file addrbook.c line 294 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object10={ .name=&dynamic_object7[0], .address=&dynamic_object8[0], .phone=&dynamic_object9[0] } ({ 0000100000000000000000000000000000000000000000000000000000000000, 0000100100000000000000000000000000000000000000000000000000000000, 0000101000000000000000000000000000000000000000000000000000000000 })
+
+State 396 file addrbook.c line 295 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object10={ .name=&dynamic_object7[0], .address=&dynamic_object8[0], .phone=&dynamic_object9[0] } ({ 0000100000000000000000000000000000000000000000000000000000000000, 0000100100000000000000000000000000000000000000000000000000000000, 0000101000000000000000000000000000000000000000000000000000000000 })
+
+State 397 file addrbook.c line 296 function input_addr thread 0
+----------------------------------------------------
+  symex_dynamic::dynamic_object10={ .name=&dynamic_object7[0], .address=&dynamic_object8[0], .phone=&dynamic_object9[0] } ({ 0000100000000000000000000000000000000000000000000000000000000000, 0000100100000000000000000000000000000000000000000000000000000000, 0000101000000000000000000000000000000000000000000000000000000000 })
+
+State 399 file addrbook.c line 297 function input_addr thread 0
+----------------------------------------------------
+  main::1::1::2::1::addr=&dynamic_object10.name (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 401 file addrbook.c line 440 function main thread 0
+----------------------------------------------------
+  list_append::list=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+State 402 file addrbook.c line 440 function main thread 0
+----------------------------------------------------
+  list_append::addr=&dynamic_object10.name (0000101100000000000000000000000000000000000000000000000000000000)
+
+State 410 file addrbook.c line 452 function main thread 0
+----------------------------------------------------
+  list_release::list=NULL (0000000000000000000000000000000000000000000000000000000000000000)
+
+Violated property:
+  file addrbook.c line 456 function main
+  assertion counter == 0
+  FALSE
+
+VERIFICATION FAILED

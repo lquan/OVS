@@ -1,0 +1,1330 @@
+file dllist.c: Parsing
+Converting
+Type-checking dllist
+Generating GOTO Program
+Adding CPROVER library
+Function Pointer Removal
+Partial Inlining
+Generic Property Instrumentation
+Pointer Analysis
+Adding Pointer Checks
+Claim list_new_elem.1:
+  file dllist.c line 40 function list_new_elem
+  assertion elem!=((void *)0)
+  FALSE
+
+Claim list_new_elem.2:
+  file dllist.c line 44 function list_new_elem
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_new_elem.3:
+  file dllist.c line 44 function list_new_elem
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_new_elem.4:
+  file dllist.c line 44 function list_new_elem
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_new_elem.5:
+  file dllist.c line 44 function list_new_elem
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_new_elem.6:
+  file dllist.c line 45 function list_new_elem
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_new_elem.7:
+  file dllist.c line 45 function list_new_elem
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_new_elem.8:
+  file dllist.c line 45 function list_new_elem
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_new_elem.9:
+  file dllist.c line 45 function list_new_elem
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_new_elem.10:
+  file dllist.c line 46 function list_new_elem
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_new_elem.11:
+  file dllist.c line 46 function list_new_elem
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_new_elem.12:
+  file dllist.c line 46 function list_new_elem
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_new_elem.13:
+  file dllist.c line 46 function list_new_elem
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_new.1:
+  file dllist.c line 54 function list_new
+  assertion list!=((void *)0)
+  FALSE
+
+Claim list_new.2:
+  file dllist.c line 57 function list_new
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_new.3:
+  file dllist.c line 57 function list_new
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_new.4:
+  file dllist.c line 57 function list_new
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_new.5:
+  file dllist.c line 57 function list_new
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_new.6:
+  file dllist.c line 58 function list_new
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_new.7:
+  file dllist.c line 58 function list_new
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_new.8:
+  file dllist.c line 58 function list_new
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_new.9:
+  file dllist.c line 58 function list_new
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.1:
+  file dllist.c line 72 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.2:
+  file dllist.c line 72 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.3:
+  file dllist.c line 72 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.4:
+  file dllist.c line 72 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.5:
+  file dllist.c line 72 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.6:
+  file dllist.c line 72 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.7:
+  file dllist.c line 73 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.8:
+  file dllist.c line 73 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.9:
+  file dllist.c line 73 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.10:
+  file dllist.c line 73 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.11:
+  file dllist.c line 73 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.12:
+  file dllist.c line 73 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.13:
+  file dllist.c line 74 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.14:
+  file dllist.c line 74 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.15:
+  file dllist.c line 74 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.16:
+  file dllist.c line 74 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.17:
+  file dllist.c line 74 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.18:
+  file dllist.c line 74 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.19:
+  file dllist.c line 77 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.20:
+  file dllist.c line 77 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.21:
+  file dllist.c line 77 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.22:
+  file dllist.c line 77 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.23:
+  file dllist.c line 77 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.24:
+  file dllist.c line 77 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.25:
+  file dllist.c line 78 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.26:
+  file dllist.c line 78 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.27:
+  file dllist.c line 78 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.28:
+  file dllist.c line 78 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.29:
+  file dllist.c line 78 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.30:
+  file dllist.c line 78 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.31:
+  file dllist.c line 79 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_append.32:
+  file dllist.c line 79 function list_append
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_append.33:
+  file dllist.c line 79 function list_append
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.34:
+  file dllist.c line 79 function list_append
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_append.35:
+  file dllist.c line 79 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.36:
+  file dllist.c line 80 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_append.37:
+  file dllist.c line 80 function list_append
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_append.38:
+  file dllist.c line 80 function list_append
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.39:
+  file dllist.c line 80 function list_append
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_append.40:
+  file dllist.c line 80 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.41:
+  file dllist.c line 84 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_append.42:
+  file dllist.c line 84 function list_append
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_append.43:
+  file dllist.c line 84 function list_append
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.44:
+  file dllist.c line 84 function list_append
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_append.45:
+  file dllist.c line 84 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.46:
+  file dllist.c line 84 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.47:
+  file dllist.c line 84 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.48:
+  file dllist.c line 84 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.49:
+  file dllist.c line 84 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.50:
+  file dllist.c line 84 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.51:
+  file dllist.c line 84 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.52:
+  file dllist.c line 85 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_append.53:
+  file dllist.c line 85 function list_append
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_append.54:
+  file dllist.c line 85 function list_append
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.55:
+  file dllist.c line 85 function list_append
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_append.56:
+  file dllist.c line 85 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_append.57:
+  file dllist.c line 85 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.58:
+  file dllist.c line 85 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.59:
+  file dllist.c line 85 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.60:
+  file dllist.c line 85 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.61:
+  file dllist.c line 85 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.62:
+  file dllist.c line 85 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.63:
+  file dllist.c line 91 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.64:
+  file dllist.c line 91 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.65:
+  file dllist.c line 91 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.66:
+  file dllist.c line 91 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.67:
+  file dllist.c line 91 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.68:
+  file dllist.c line 91 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.69:
+  file dllist.c line 92 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list_last_element)) || !(SAME-OBJECT(list_last_element, __CPROVER_deallocated))
+
+Claim list_append.70:
+  file dllist.c line 92 function list_append
+  dereference failure: NULL pointer
+  !(list_last_element == NULL)
+
+Claim list_append.71:
+  file dllist.c line 92 function list_append
+  dereference failure: invalid pointer
+  !((void *)list_last_element == &return_value_my_malloc$1$object)
+
+Claim list_append.72:
+  file dllist.c line 92 function list_append
+  dereference failure: object upper bound
+  !((void *)list_last_element == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list_last_element) > -21)
+
+Claim list_append.73:
+  file dllist.c line 92 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list_last_element) < 0) || !((void *)list_last_element == &return_value_my_malloc$1$object)
+
+Claim list_append.74:
+  file dllist.c line 92 function list_append
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(list_last_element))
+
+Claim list_append.75:
+  file dllist.c line 94 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.76:
+  file dllist.c line 94 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.77:
+  file dllist.c line 94 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.78:
+  file dllist.c line 94 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.79:
+  file dllist.c line 94 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.80:
+  file dllist.c line 94 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_append.81:
+  file dllist.c line 95 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list_first_element)) || !(SAME-OBJECT(list_first_element, __CPROVER_deallocated))
+
+Claim list_append.82:
+  file dllist.c line 95 function list_append
+  dereference failure: NULL pointer
+  !(list_first_element == NULL)
+
+Claim list_append.83:
+  file dllist.c line 95 function list_append
+  dereference failure: invalid pointer
+  !((void *)list_first_element == &return_value_my_malloc$1$object)
+
+Claim list_append.84:
+  file dllist.c line 95 function list_append
+  dereference failure: object upper bound
+  !((void *)list_first_element == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list_first_element) > -21)
+
+Claim list_append.85:
+  file dllist.c line 95 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list_first_element) < 0) || !((void *)list_first_element == &return_value_my_malloc$1$object)
+
+Claim list_append.86:
+  file dllist.c line 95 function list_append
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(list_first_element))
+
+Claim list_append.87:
+  file dllist.c line 99 function list_append
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_append.88:
+  file dllist.c line 99 function list_append
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.89:
+  file dllist.c line 99 function list_append
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_append.90:
+  file dllist.c line 99 function list_append
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_append.91:
+  file dllist.c line 99 function list_append
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_append.92:
+  file dllist.c line 99 function list_append
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.1:
+  file dllist.c line 108 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.2:
+  file dllist.c line 108 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.3:
+  file dllist.c line 108 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.4:
+  file dllist.c line 108 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.5:
+  file dllist.c line 108 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.6:
+  file dllist.c line 108 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.7:
+  file dllist.c line 108 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.8:
+  file dllist.c line 108 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.9:
+  file dllist.c line 108 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.10:
+  file dllist.c line 108 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.11:
+  file dllist.c line 108 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.12:
+  file dllist.c line 108 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.13:
+  file dllist.c line 110 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.14:
+  file dllist.c line 110 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.15:
+  file dllist.c line 110 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.16:
+  file dllist.c line 110 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.17:
+  file dllist.c line 110 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.18:
+  file dllist.c line 110 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.19:
+  file dllist.c line 111 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.20:
+  file dllist.c line 111 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.21:
+  file dllist.c line 111 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.22:
+  file dllist.c line 111 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.23:
+  file dllist.c line 111 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.24:
+  file dllist.c line 111 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.25:
+  file dllist.c line 113 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.26:
+  file dllist.c line 113 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.27:
+  file dllist.c line 113 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.28:
+  file dllist.c line 113 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.29:
+  file dllist.c line 113 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.30:
+  file dllist.c line 113 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.31:
+  file dllist.c line 115 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.32:
+  file dllist.c line 115 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.33:
+  file dllist.c line 115 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.34:
+  file dllist.c line 115 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.35:
+  file dllist.c line 115 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.36:
+  file dllist.c line 115 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.37:
+  file dllist.c line 115 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_remove.38:
+  file dllist.c line 115 function list_remove
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_remove.39:
+  file dllist.c line 115 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.40:
+  file dllist.c line 115 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_remove.41:
+  file dllist.c line 115 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.42:
+  file dllist.c line 115 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem))
+
+Claim list_remove.43:
+  file dllist.c line 118 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.44:
+  file dllist.c line 118 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.45:
+  file dllist.c line 118 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.46:
+  file dllist.c line 118 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.47:
+  file dllist.c line 118 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.48:
+  file dllist.c line 118 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.49:
+  file dllist.c line 119 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list_first_element)) || !(SAME-OBJECT(list_first_element, __CPROVER_deallocated))
+
+Claim list_remove.50:
+  file dllist.c line 119 function list_remove
+  dereference failure: NULL pointer
+  !(list_first_element == NULL)
+
+Claim list_remove.51:
+  file dllist.c line 119 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list_first_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.52:
+  file dllist.c line 119 function list_remove
+  dereference failure: object upper bound
+  !((void *)list_first_element == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list_first_element) > -21)
+
+Claim list_remove.53:
+  file dllist.c line 119 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list_first_element) < 0) || !((void *)list_first_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.54:
+  file dllist.c line 119 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(list_first_element))
+
+Claim list_remove.55:
+  file dllist.c line 119 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.56:
+  file dllist.c line 119 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.57:
+  file dllist.c line 119 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.58:
+  file dllist.c line 119 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.59:
+  file dllist.c line 119 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.60:
+  file dllist.c line 119 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.61:
+  file dllist.c line 122 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.62:
+  file dllist.c line 122 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.63:
+  file dllist.c line 122 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.64:
+  file dllist.c line 122 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.65:
+  file dllist.c line 122 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.66:
+  file dllist.c line 122 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.67:
+  file dllist.c line 124 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.68:
+  file dllist.c line 124 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.69:
+  file dllist.c line 124 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.70:
+  file dllist.c line 124 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.71:
+  file dllist.c line 124 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.72:
+  file dllist.c line 124 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.73:
+  file dllist.c line 124 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_remove.74:
+  file dllist.c line 124 function list_remove
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_remove.75:
+  file dllist.c line 124 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.76:
+  file dllist.c line 124 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_remove.77:
+  file dllist.c line 124 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.78:
+  file dllist.c line 124 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem))
+
+Claim list_remove.79:
+  file dllist.c line 127 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.80:
+  file dllist.c line 127 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.81:
+  file dllist.c line 127 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.82:
+  file dllist.c line 127 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.83:
+  file dllist.c line 127 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.84:
+  file dllist.c line 127 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.85:
+  file dllist.c line 128 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list_last_element)) || !(SAME-OBJECT(list_last_element, __CPROVER_deallocated))
+
+Claim list_remove.86:
+  file dllist.c line 128 function list_remove
+  dereference failure: NULL pointer
+  !(list_last_element == NULL)
+
+Claim list_remove.87:
+  file dllist.c line 128 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list_last_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.88:
+  file dllist.c line 128 function list_remove
+  dereference failure: object upper bound
+  !((void *)list_last_element == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list_last_element) > -21)
+
+Claim list_remove.89:
+  file dllist.c line 128 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list_last_element) < 0) || !((void *)list_last_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.90:
+  file dllist.c line 128 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(list_last_element))
+
+Claim list_remove.91:
+  file dllist.c line 128 function list_remove
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_remove.92:
+  file dllist.c line 128 function list_remove
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.93:
+  file dllist.c line 128 function list_remove
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_remove.94:
+  file dllist.c line 128 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_remove.95:
+  file dllist.c line 128 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_remove.96:
+  file dllist.c line 128 function list_remove
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_remove.97:
+  file dllist.c line 133 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_remove.98:
+  file dllist.c line 133 function list_remove
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_remove.99:
+  file dllist.c line 133 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.100:
+  file dllist.c line 133 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_remove.101:
+  file dllist.c line 133 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.102:
+  file dllist.c line 133 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem))
+
+Claim list_remove.103:
+  file dllist.c line 134 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem_prev_element)) || !(SAME-OBJECT(elem_prev_element, __CPROVER_deallocated))
+
+Claim list_remove.104:
+  file dllist.c line 134 function list_remove
+  dereference failure: NULL pointer
+  !(elem_prev_element == NULL)
+
+Claim list_remove.105:
+  file dllist.c line 134 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem_prev_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.106:
+  file dllist.c line 134 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem_prev_element == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem_prev_element) > -21)
+
+Claim list_remove.107:
+  file dllist.c line 134 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem_prev_element) < 0) || !((void *)elem_prev_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.108:
+  file dllist.c line 134 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem_prev_element))
+
+Claim list_remove.109:
+  file dllist.c line 134 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_remove.110:
+  file dllist.c line 134 function list_remove
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_remove.111:
+  file dllist.c line 134 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.112:
+  file dllist.c line 134 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_remove.113:
+  file dllist.c line 134 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.114:
+  file dllist.c line 134 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem))
+
+Claim list_remove.115:
+  file dllist.c line 137 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_remove.116:
+  file dllist.c line 137 function list_remove
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_remove.117:
+  file dllist.c line 137 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.118:
+  file dllist.c line 137 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_remove.119:
+  file dllist.c line 137 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.120:
+  file dllist.c line 137 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem))
+
+Claim list_remove.121:
+  file dllist.c line 138 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem_next_element)) || !(SAME-OBJECT(elem_next_element, __CPROVER_deallocated))
+
+Claim list_remove.122:
+  file dllist.c line 138 function list_remove
+  dereference failure: NULL pointer
+  !(elem_next_element == NULL)
+
+Claim list_remove.123:
+  file dllist.c line 138 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem_next_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.124:
+  file dllist.c line 138 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem_next_element == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem_next_element) > -21)
+
+Claim list_remove.125:
+  file dllist.c line 138 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem_next_element) < 0) || !((void *)elem_next_element == &return_value_my_malloc$1$object)
+
+Claim list_remove.126:
+  file dllist.c line 138 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem_next_element))
+
+Claim list_remove.127:
+  file dllist.c line 138 function list_remove
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(elem)) || !(SAME-OBJECT(elem, __CPROVER_deallocated))
+
+Claim list_remove.128:
+  file dllist.c line 138 function list_remove
+  dereference failure: NULL pointer
+  !(elem == NULL)
+
+Claim list_remove.129:
+  file dllist.c line 138 function list_remove
+  dereference failure: invalid pointer
+  !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.130:
+  file dllist.c line 138 function list_remove
+  dereference failure: object upper bound
+  !((void *)elem == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(elem) > -21)
+
+Claim list_remove.131:
+  file dllist.c line 138 function list_remove
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(elem) < 0) || !((void *)elem == &return_value_my_malloc$1$object)
+
+Claim list_remove.132:
+  file dllist.c line 138 function list_remove
+  dereference failure: invalid pointer
+  !(INVALID-POINTER(elem))
+
+Claim list_remove.133:
+  file dllist.c line 142 function list_remove
+  free argument is dynamic object
+  DYNAMIC_OBJECT(ptr)
+
+Claim list_remove.134:
+  file dllist.c line 142 function list_remove
+  free argument has offset zero
+  POINTER_OFFSET(ptr) == 0
+
+Claim list_remove.135:
+  file dllist.c line 142 function list_remove
+  double free
+  FALSE
+
+Claim list_release.1:
+  file dllist.c line 154 function list_release
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_release.2:
+  file dllist.c line 154 function list_release
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_release.3:
+  file dllist.c line 154 function list_release
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_release.4:
+  file dllist.c line 154 function list_release
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_release.5:
+  file dllist.c line 154 function list_release
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_release.6:
+  file dllist.c line 154 function list_release
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_release.7:
+  file dllist.c line 158 function list_release
+  dereference failure: invalid pointer
+  !(list == &return_value_list_new$1$object)
+
+Claim list_release.8:
+  file dllist.c line 158 function list_release
+  dereference failure: invalid pointer
+  !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_release.9:
+  file dllist.c line 158 function list_release
+  dereference failure: object upper bound
+  !((void *)list == &return_value_my_malloc$1$object) || !(POINTER_OFFSET(list) > -17)
+
+Claim list_release.10:
+  file dllist.c line 158 function list_release
+  dereference failure: object lower bound
+  !(POINTER_OFFSET(list) < 0) || !((void *)list == &return_value_my_malloc$1$object)
+
+Claim list_release.11:
+  file dllist.c line 158 function list_release
+  dereference failure: invalidated dynamic object
+  !(DYNAMIC_OBJECT(list)) || !(SAME-OBJECT(list, __CPROVER_deallocated))
+
+Claim list_release.12:
+  file dllist.c line 158 function list_release
+  dereference failure: NULL pointer
+  !(list == NULL)
+
+Claim list_release.13:
+  file dllist.c line 161 function list_release
+  free argument is dynamic object
+  DYNAMIC_OBJECT(ptr)
+
+Claim list_release.14:
+  file dllist.c line 161 function list_release
+  free argument has offset zero
+  POINTER_OFFSET(ptr) == 0
+
+Claim list_release.15:
+  file dllist.c line 161 function list_release
+  double free
+  FALSE
+

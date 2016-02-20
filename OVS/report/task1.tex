@@ -1,0 +1,238 @@
+\section*{Task 1}
+\addcontentsline{toc}{section}{Task 1}
+First, we fixed the problem of \texttt{cbmc} with respect to the \texttt{strdup} function (unexpected array expression: `byte\_update\_little\_endian') as follows\footnote{See \url{http://stackoverflow.com/questions/252782}}. The implementation used in this case is not very memory efficient (especially when $\texttt{strlen(tmp)} \ll \texttt{INPUT\_BUF\_SIZE} - 1$), but does deal with the \texttt{cbmc} problem and is safe when \texttt{input} guarantees\footnote{See Task~4 for the buffer overflow fix in \texttt{input}.} $\texttt{strlen(tmp)} \leq \texttt{INPUT\_BUF\_SIZE} - 1$.
+
+
+\begin{lstlisting}
+#define get_string(tag, dst){ printf (tag); \
+                              tmp = input (INPUT_BUF_SIZE); \
+                              if (strlen(tmp) == 0) { check_abort } \
+                              dst = my_malloc(INPUT_BUF_SIZE * (sizeof (char))); \
+                              if (!dst) { goto ABORT_INPUT; } \
+                              strcpy(dst, tmp);}
+\end{lstlisting}
+
+To check the address book application for absence of \texttt{NULL} pointer dereferences---in particular, checking that the result of a memory allocation is never dereferenced without a runtime-test ensuring that a non-\texttt{NULL} pointer was returned, we instrumented the \texttt{malloc} function using a non-deterministic choice (boolean) function to model the possibility of a memory allocation failure:
+
+\begin{lstlisting}
+#ifdef __VERIFY
+_Bool nondet_bool ();
+void *my_malloc (size_t s)
+{
+  if (nondet_bool()) { return (NULL); }
+  return (malloc (s)); 
+}
+(...)
+#endif
+\end{lstlisting}
+
+Then we added \texttt{assert} statements, not only everywhere a pointer was dereferenced after a \texttt{malloc}, but also to check that the functions are used with correct preconditions (instead of extra runtime \texttt{if}-checks which result in extra overhead, compared to \texttt{assert} statements which can be turned off in the final, optimized release version). In general, we also added explicit initialization and used intermingled declarations of variables and code if possible for increased readability (which are C99 language features which were already used in the original program).
+
+\begin{lstlisting}
+struct list_element *list_new_elem (struct address *addr)
+{
+  assert(addr);
+
+  struct list_element *elem = my_malloc (sizeof (struct list_element));
+  if (!elem) { return (NULL); }
+
+  assert(elem);
+  elem->prev = elem;
+  (...)
+}
+
+
+struct list *list_new (void)
+{
+  struct list *list = my_malloc (sizeof (struct list));
+  if (!list) { return (NULL); }
+
+  assert(list);
+  list->first = NULL;
+  (...)
+}
+
+void list_append (struct list *list, struct address *addr)
+{
+  assert(list);
+  assert(addr);
+
+  struct list_element *elem = list_new_elem(addr);
+  if(!elem) { return; } 
+  (...)
+}
+
+void list_remove (struct list *list, struct list_element *elem)
+{
+  assert(list);
+  if (!elem) { return; }
+  (...)
+}
+
+void list_release (struct list *list)
+{
+  assert(list);
+  (...)
+}
+
+struct address *input_addr ()
+{
+  (...)
+  struct address *address = my_malloc (sizeof(struct address));
+  if(!address) { goto ABORT_INPUT; }
+
+  assert(address);
+  assert(name);
+  assert(addr);
+  assert(phone);
+
+  address->name    = name;
+  address->address = addr;
+  address->phone   = phone;
+  return (address);
+  (...)
+}
+
+void print_addr (struct address *addr)
+{
+  assert(addr);
+  (...)
+}
+
+void list_addrs (struct list *list)
+{
+  assert(list);
+  struct list_element *elem = list->first;
+  (...)
+}
+
+void del_addr (struct list *list)
+{
+  assert(list);
+  struct list_element *elem = list->first;
+  (...)
+}
+
+int cmp_addr (struct address *addr, char *str)
+{
+  assert(addr);
+  assert(str);
+  (..)
+}
+
+void search_addr (struct list *list)
+{
+  assert(list);
+  (...)
+}
+\end{lstlisting}
+ 
+
+%Since we added them this way, we catch all \texttt{NULL}-pointer dereferences including the ones in the context of memory allocations. 
+We bounded all loops to three iterations---and turned off the unwinding assertions (and thus used \texttt{cbmc} `only' for bug hunting, not full verification). We did this because the while loop in the main function has no (useful) run-time bound. We also limited the buffer size to 8 (instead of the original 1024) to limit the number of branches (this should not have an influence on the result of the \texttt{cbmc} verification for the objectives of this task). These parameters were chosen to limit the memory usage for the SAT solver.
+\begin{Verbatim}[formatcom=\color{red}]
+cbmc addrbook.c -D __VERIFY --unwind 3 --no-unwinding-assertions
+\end{Verbatim}
+
+The following assertion violations were found by \texttt{cbmc} and fixed: 
+\begin{Verbatim}[fontsize=\footnotesize]
+Violated property:
+  file addrbook.c line 251 function del_addr
+  assertion list
+  FALSE
+\end{Verbatim}
+\begin{lstlisting}
+int main (int argc, char **argv)
+{
+  /* list initialisation */
+  struct list *list = list_new();
+  if (!list) { abort(); } // abort the program if empty address book list cannot be created
+  (...)
+}
+\end{lstlisting}
+
+\begin{Verbatim}[fontsize=\footnotesize]
+Violated property:
+  file addrbook.c line 205 function input_addr
+  assertion address
+  FALSE
+\end{Verbatim}
+\begin{lstlisting}
+struct address *input_addr ()
+{
+  (...)
+  address = my_malloc (sizeof(struct address));
+  if (!address) { goto ABORT_INPUT; } // NULL pointer dereference fixed
+  (...)
+}
+\end{lstlisting}
+
+\begin{Verbatim}[fontsize=\footnotesize]
+Violated property:
+  file addrbook.c line 105 function list_append
+  assertion addr
+  FALSE
+\end{Verbatim}
+\begin{lstlisting}
+int main (int argc, char **argv)
+{
+  (...)
+  char c = 0;
+  /* main loop */
+  while (c != 'q')
+    {
+    (...)
+    switch (c) {
+      case 'a': 
+        struct address *addr = input_addr();
+        if (addr) { list_append (list, addr); } //only append address if it was created succesfully
+        break; 
+      (...)
+    }
+}
+\end{lstlisting}
+
+
+
+
+% 
+% It is not clear whether all \texttt{NULL} pointer dereferences should be fixed in this task using \texttt{assert} statements, but doing so would be rather tedious:
+% \begin{enumerate}
+%  \item \texttt{cbmc} already checks for pointer safety errors (which include \texttt{NULL} pointer dereferences) using the \verb|--pointer-check| option.
+%  \item Because we manually instrumented the \texttt{malloc} function, it is quite easy to manually check whether there is an appropriate runtime check. This makes adding \texttt{assert} statements only feel superfluous: the relative short length of the code blocks has as consequence that the \texttt{assert} statements follow the runtime check immediately, and therefore are spotted quickly.
+% \end{enumerate}
+% For these reasons, other \texttt{NULL} pointer dereferences are fixed in Task~4 using \verb|--pointer-check|.
+
+% 
+% 
+%  void print_addr (struct address *addr)
+%  {
+%   if (!addr) { return; } // NULL pointer dereference fixed
+%   (...)
+%  }
+% 
+%  int cmp_addr (struct address *addr, char *str)
+%  {
+%   if (!addr) { return 0; } // NULL pointer dereference fixed
+%   (...)
+%  }
+% 
+%  void del_addr (struct list *list)
+%  {
+%   if (!list) { return; }  // NULL pointer dereference fixed
+%   (...)
+%  }
+% 
+%  void list_addrs (struct list *list)
+%  {
+%   if (!list) { return; }  // NULL pointer dereference fixed
+%   (...)
+%  }
+% 
+% 
+%  void search_addr (struct list *list)
+%  {
+%   if (!list) { return; }  // NULL pointer dereference fixed
+%   (...)
+%  }
+

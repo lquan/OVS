@@ -1,0 +1,4 @@
+\begin{tabular}{c | c c c c c c}
+$n$ & 4 & 8 & 12 & 16 & 20 & 24 \\ \hline
+time (s) & 0.1 & 0.9 & 15 & 199 & 1828 & 11728 \\
+\end{tabular}

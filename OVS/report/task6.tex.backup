@@ -1,0 +1,22 @@
+\section*{Task 6}
+%As \cite{Shankar01detectingformat} mentions, static code analysis tools are not well-suited for this task.
+It is not clear how \texttt{cbmc} should be used to detect format string vulnerabilities~\cite{lhee,Younan04codeinjection}.  However, \emph{possible} format string vulnerabilities are usually very easy to detect: 
+\begin{itemize}
+ \item manually, which can be done only on short programs;
+ \item using a \texttt{grep}-like approach (\texttt{PScan}) or more advanced static analysis tools such as \texttt{flawfinder}, \texttt{RATS} and \texttt{ITS4};
+ \item using compiler flags (\texttt{gcc} using e.g.~\texttt{-Wformat} which was even a default parameter on our system);
+ \item using existing compiler extensions such as FormatGuard~\cite{formatguard} which a.o.~perform argument counting.
+\end{itemize}
+
+E.g., taking the most basic format string vulnerability example in~\cite{lhee}
+\begin{lstlisting}
+void vulnfunc (char *user)
+{
+    printf(user);
+}
+\end{lstlisting}
+and compiling with \texttt{gcc} gives following warning:
+\begin{Verbatim}[fontsize=\small]
+string_vul.c: In function ‘vulnfunc’:
+string_vul.c:7: warning: format not a string literal and no format arguments
+\end{Verbatim}

@@ -1,0 +1,475 @@
+#define _GNU_SOURCE
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include <termios.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+
+#include <assert.h>
+
+#ifdef __VERIFY
+int counter = 0;
+_Bool nondet_bool ();
+void *my_malloc (size_t s)
+ {
+  if (nondet_bool()) { return (NULL); }
+  
+  counter++;
+  return (malloc (s)); 
+ }
+ 
+ void my_free(void* arg)
+ {
+    free(arg);
+    counter--;
+ }
+#else
+void *my_malloc (size_t s)
+ {
+  return (malloc (s));
+ }
+ 
+ 
+ void my_free(void* arg)
+ {
+    free(arg);
+ }
+#endif
+
+
+/* --- Data Structures ---------------------------------------------------- */
+
+struct address {
+ char *name;
+ char *address;
+ char *phone; };
+
+struct list_element {
+ struct list_element *prev;
+ struct list_element *next;
+ struct address *addr; };
+
+struct list {
+ struct list_element *first;
+ struct list_element *last; };
+
+
+/* --- Helper Functions --------------------------------------------------- */
+
+#define INPUT_BUF_SIZE 5
+
+char *input (int n)
+ {
+  static char buf[INPUT_BUF_SIZE];
+  char c = 0; //added init
+  int  i = 0;
+  
+  while (c != '\n' && i <= n && i < INPUT_BUF_SIZE - 1) //FIXED: i< INPUT_BUF_SIZE -> ARRAY OUT OF BOUNDS
+   { 
+     c = getchar();
+     printf ("%c", c);
+     if (c != '\n' ) { 
+        buf[i] = c; 
+        i++; 
+     } 
+   }
+
+  buf[i] = '\0';
+    
+  return (buf);
+ }
+
+
+/* --- List Implementation ------------------------------------------------ */
+
+struct list_element *list_new_elem (struct address *addr)
+ {
+  if(!addr) { return NULL; } //added addr check
+  
+  struct list_element *elem;
+
+  elem = my_malloc  (sizeof (struct list_element));
+  if (!elem) { return (NULL); }
+  
+  assert (elem!=NULL);
+  elem->prev = elem;
+  elem->next = elem;
+  elem->addr = addr;
+
+  return (elem);
+ }
+
+struct list *list_new (void)
+ {
+  struct list *list =  my_malloc  (sizeof (struct list));
+  if (!list) { return (NULL); }
+  
+  assert(list!=NULL);
+  list->first = NULL;
+  list->last  = NULL;
+
+  return (list);
+ }
+
+void list_append (struct list *list, struct address *addr)
+ {
+  if (!list) {
+    if (addr) {
+      if (addr->name) { my_free(addr->name); }
+      if (addr->address) { my_free(addr->address); }
+      if (addr->phone) { my_free(addr->phone); }
+  
+      my_free (addr);
+    }
+    return; 
+  }
+  
+  struct list_element *elem = list_new_elem(addr); // = NULL;
+  if (!elem) { 
+    if (addr) {
+      if (addr->name) { my_free(addr->name); }
+      if (addr->address) { my_free(addr->address); }
+      if (addr->phone) { my_free(addr->phone); }
+  
+      my_free (addr);
+       
+       
+    }
+    return;
+  }
+
+  if (list->first == NULL && list->last == NULL)
+   {
+    list->first = elem;
+    list->last  = elem;
+    elem->prev  = elem;
+    elem->next  = elem;
+   }
+   
+   else
+   {
+    elem->prev = list->last;
+    elem->next = list->first;
+    
+    
+    //list->last->next = elem;
+    //list->first->prev = elem;
+    
+    struct list_element *list_last_element = list->last;
+    list_last_element->next = elem;
+    
+    struct list_element *list_first_element = list->first;
+    list_first_element->prev = elem;
+   
+    //
+    
+    list->last = elem;
+   }
+
+  return;
+ }
+
+void list_remove (struct list *list, struct list_element *elem)
+ {
+  if (!elem) { return; }
+  if (!list) { 
+  
+    struct address *addr_temp = elem->addr;
+    if (addr_temp) {
+      if (addr_temp->name) { my_free(addr_temp->name); }
+      if (addr_temp->address) { my_free(addr_temp->address); }
+      if (addr_temp->phone) { my_free(addr_temp->phone); }
+  
+      my_free (elem->addr);
+      
+      my_free(elem); 
+      return; 
+    }
+  }
+  
+ 
+  if (elem == list->first && elem == list->last) //only one element in list
+   {
+    list->first = NULL;
+    list->last  = NULL;
+   }
+   else if (elem == list->first) //elem is first element of list which has length > 1
+   {
+    list->first = elem->next;
+    
+    //list->first->prev = list->last;
+    struct list_element *list_first_element = list->first;
+    list_first_element->prev = list->last;
+    
+   }
+   else if (elem == list->last) 
+   {
+    list->last = elem->prev;
+    
+    //list->last->next = list->first;
+    struct list_element *list_last_element = list->last;
+    list_last_element->next = list->first;
+   }
+   else
+   {
+    //elem->prev->next = elem->next;
+    struct list_element *elem_prev_element = elem->prev;
+    elem_prev_element->next = elem->next;
+    
+    //elem->next->prev = elem->prev;
+    struct list_element *elem_next_element = elem->next;
+    elem_next_element->prev = elem->prev;
+   }
+   
+   
+  //my_free(elem->addr->name);
+  //my_free(elem->addr->address);
+  //my_free(elem->addr->telephone);
+  //fixed
+  struct address *addr_temp = elem->addr;
+  if (addr_temp) {
+      if (addr_temp->name) { my_free(addr_temp->name); }
+      if (addr_temp->address) { my_free(addr_temp->address); }
+      if (addr_temp->phone) { my_free(addr_temp->phone); }
+  
+      my_free (elem->addr);
+  }
+  
+  my_free (elem);
+
+  return;
+ }
+
+void list_release (struct list *list)
+ {
+  if (!list) { return; }
+
+  struct list_element *elem = list->first;
+  while (elem)
+   {
+    list_remove (list, elem);
+    elem = list->first;
+   }
+
+  my_free (list);
+
+  return;
+ }
+
+
+/* --- Address Book Functionality ----------------------------------------- */
+
+#define check_abort          { printf ("abort (y/n)? "); \
+                               char c = 0; while (c != 'y' && c != 'n') \
+                                { c = getchar(); printf ("%c", c); if(c!= 'y' && c!='n'){c = 'y';}} \
+                               if (c == 'y') { goto ABORT_INPUT; } }
+#define get_string(tag, dst) { printf(tag); \
+                               tmp = input (INPUT_BUF_SIZE); \
+                               if (strlen(tmp) == 0) { check_abort } \
+                               dst = my_malloc (INPUT_BUF_SIZE * (sizeof (char))); \
+                               if (dst == NULL) { goto ABORT_INPUT; } \
+                               strcpy(dst, tmp);}
+                               //dst = strdup (tmp); \
+
+/*char *test_input (){
+  static char buf[INPUT_BUF_SIZE];
+  int  i = 0;  
+  while (nondet_bool() && i < INPUT_BUF_SIZE - 1){ 
+        buf[i] = 'a'; 
+        i++;  
+   }
+
+  buf[i] = '\0';
+    
+  return (buf);
+ }*/
+
+struct address *input_addr ()
+ {
+  struct address *address = NULL; //MUST BE NULL for abort_input
+  char *tmp, *name = NULL, *addr = NULL, *phone = NULL;
+  //char c;
+
+  get_string ("name: ", name);
+  get_string ("address: ", addr);
+  get_string ("phone: ", phone);
+  //if (!name || !addr || !phone) return NULL;
+  
+  address = my_malloc (sizeof(struct address));
+  if (!address) { goto ABORT_INPUT; }
+  
+  address->name    = name;
+  address->address = addr;
+  address->phone   = phone;
+  return (address);
+
+ABORT_INPUT:
+  if (name)  { my_free (name); }
+  if (addr)  { my_free (addr); }
+  if (phone) { my_free (phone); }
+  if (address) { my_free(address);}
+  
+  return (NULL);
+ }
+
+void print_addr (struct address *addr)
+ {
+  if (!addr) { return; } //FIXED 
+
+  /*printf (addr->name);*/ printf("%s", addr->name); //should be  .. to protect against string format vuln.
+  printf("; ");
+  printf ("%s; %s\n", addr->address, addr->phone);
+
+  //return;
+ }
+
+void list_addrs (struct list *list)
+ {
+  if (!list) { return; }//NULL pointer dereference fixed
+  
+  struct list_element *elem = list->first; // = NULL;
+  unsigned int i;
+
+  i = 0;
+  while (elem)
+   {
+     printf ("%04u:\n  ", i);
+     print_addr (elem->addr);
+
+     if (elem == list->last)
+      { elem = NULL; }
+      else
+      { elem = elem->next; }
+     i++; }
+
+  return;
+ }
+
+void del_addr (struct list *list)
+ {
+  if(!list){ return; }//NULL pointer dereference fixed
+  struct list_element *elem;
+  unsigned int i, n;
+  char *tmp;
+
+  printf ("delete #: ");
+  tmp = input (INPUT_BUF_SIZE);
+  n = atoi (tmp);
+
+  elem = list->first;
+  i = 0;
+  while (elem && i != n)
+   {
+    if (elem == list->last)
+     { elem = NULL; }
+     else
+     { elem = elem->next; }
+    i++; }
+
+  list_remove (list, elem);
+
+  return;
+ }
+
+int cmp_addr (struct address *addr, char *str)
+ {
+  if (!addr || !str) { return(0); } //fixed
+  
+  if (strcasestr (addr->name, str))    { return (1); }
+  if (strcasestr (addr->address, str)) { return (1); }
+  if (strcasestr (addr->phone, str))   { return (1); }
+  
+  return (0);
+ }
+
+void search_addr (struct list *list)
+ {
+  if (!list) { return; }  //FIXED BUT NOT REPORTED IN CBMC
+  
+  struct list_element *elem;// = NULL;
+  unsigned int i;
+  char *str;
+
+  printf ("search: ");
+  str = input (INPUT_BUF_SIZE);
+
+  elem = list->first;
+  i = 0;
+  while (elem)
+   {
+     if (cmp_addr (elem->addr, str))
+      { printf ("%04u:\n  ", i);
+        print_addr (elem->addr); }
+
+     if (elem == list->last)
+      { elem = NULL; }
+      else
+      { elem = elem->next; }
+     i++; }
+
+  return;
+ }
+
+
+/* --- main() ------------------------------------------------------------- */
+
+int main (int argc, char **argv)
+ {
+  struct termios oldT, newT;
+  struct list *list = NULL;
+  char c = 0;
+
+//for unwinding stuff:
+	int teller = 1;
+
+
+  /* terminal setup */
+  ioctl(0,TCGETS,&oldT);
+  newT=oldT;
+  newT.c_lflag &= ~ECHO;
+  newT.c_lflag &= ~ICANON;
+  ioctl(0,TCSETS,&newT);
+
+
+  /* list initialisation */
+  list = list_new ();
+
+  /* main loop */
+  while (c != 'q' && teller < 3)
+   {
+	teller++; //(for unwinding assert)
+    printf ("a: add; l: list; d: delete; s: search; q: quit\n");
+    c = getchar();
+    if (c != '\n') { printf ("%c\n", c); }
+    switch (c) {
+     case 'a': { struct address *addr;
+                 addr = input_addr();
+                 list_append (list, addr);
+                 break; }
+     case 'l': { list_addrs (list);
+                 break; }
+     case 'd': { del_addr (list);
+                 break; }
+     case 's': { search_addr (list);
+                 break; }
+     default : { break; } }
+   }
+
+  /* cleanup */
+  list_release (list);
+  #ifdef __VERIFY
+	assert(counter >=0);
+	assert(counter <= 8);
+	//assert(counter == 0);
+  #endif
+
+
+  /* restore terminal settings */
+  ioctl(0,TCSETS,&oldT);
+
+  return (0);
+ }
+

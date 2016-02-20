@@ -1,0 +1,86 @@
+\section*{Task 2}
+\addcontentsline{toc}{section}{Task 2}
+The stack of integers uses a singly linked list based on the following data structure:
+\begin{lstlisting}
+// forward declaration of struct and typedef
+typedef struct node Node;
+
+// Linked list data structure
+struct node {
+    int data;
+    Node* next;
+};
+\end{lstlisting}
+
+Popping from an empty stack has in general undefined behavior.\footnote{See \url{http://stackoverflow.com/questions/7390126}} Thus we chose to include a function to check if a stack is empty so that the programmer can check the stack before popping. If a pop happens from an empty stack, the program displays an error message and aborts.
+
+\begin{lstlisting}
+void push(Node** headRef, int newData) {
+    // allocate node
+    Node* newNode = (Node*) my_malloc(sizeof(Node));
+    if (!newNode) return;
+            
+    newNode->data = newData;
+    newNode->next = (*headRef);
+    (*headRef) = newNode;
+}
+
+int pop(Node** headRef) {
+    Node* head = *headRef;
+    if(!head) { fputs("Error: pop from empty stack\n", stderr);  abort();  }
+    int result = head->data; // pull out the data before the node is deleted
+    *headRef = head->next;
+    my_free(head); // free the head node
+    return result;
+}
+
+int is_empty(Node* head) {
+    return head == NULL;
+}
+\end{lstlisting}
+
+Our test harness consists of a \texttt{main} which simply initializes a empty stack, pushes a large number of integers (value $i$ in the $i$th iteration) and then popping until the stack is empty and checking the bounds of the popped elements. We first tested the program using some \texttt{printf} statements for 1024 elements by running it manually.
+\begin{lstlisting}
+int main() {
+    Node* stack = NULL; //initialize stack
+    int i,popped;
+    for (i=0; i < NB_ELEMENTS; ++i) { push(&stack, i);  }
+    while( stack ) {  popped = pop(&stack); assert( popped >= 0 && popped < NB_ELEMENTS); }
+    assert(counter==0);
+    return 0;
+}
+\end{lstlisting}
+To check the program for the absence for \texttt{NULL} pointer dereferences, buffer overflows and pointer-safety errors using \texttt{cbmc}, we then again instrumented the \texttt{malloc} function (as in Task~1) and ran the program with the \verb|--pointer-check| and \verb|--bounds-check| options (first separately, then together). We also added a counter for keeping track of the number of \texttt{malloc}s minus \texttt{free}s to check for memory leaks by putting a \texttt{assert} statement at the end that this number is zero.
+\begin{lstlisting}
+#ifdef __VERIFY
+int counter = 0;
+_Bool nondet_bool ();
+void *my_malloc (size_t s)
+{ 
+  if (nondet_bool()) { return (NULL); }
+  
+  counter++;
+  return (malloc (s)); 
+}
+ 
+void my_free(void* arg)
+{
+  free(arg);
+  counter--;
+}
+(...)
+#endif
+\end{lstlisting}
+
+The while loop in the main function has no (useful) run-time bound. Thus,
+the \verb|--unwind| parameter has to be used---using (trivial) loop-bounds, that is, the number of elements---in order to prevent infinite unwinding.
+
+When we tried to verify the program using the test harness for many elements ($n > 1000$), the verification step took too long to complete. This is a manifestation of the state explosion problem, caused by the fact that when creating an element, it can have either a successful or failed \texttt{malloc} operation, which results in $2^n$ possible paths. A couple of computation times are shown: they confirm that \texttt{cbmc} does not scale well for a large number of elements in this program.
+\input{times.tex}
+
+Combinations with \verb|--bounds-check| and/or \verb|--pointer-check| options also do not pose extra problems, e.g., for $n=8$, following verification succeeds in $1.6$\,s.
+\begin{Verbatim}[formatcom=\color{red}]
+cbmc stack_int.c -D __VERIFY --unwind 9 --pointer-check --bounds-check
+\end{Verbatim}
+When using smaller loop bounds, \texttt{cbmc} obviously reports unwinding assertion errors.
+

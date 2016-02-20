@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{formatguard}
+C.~Cowan, M.~Barringer, S.~Beattie, G.~Kroah-hartman, M.~Frantzen, and
+  J.~Lokier.
+\newblock Formatguard: Automatic protection from printf format string
+  vulnerabilities.
+\newblock In {\em In Proceedings of the 10th USENIX Security Symposium}, 2001.
+
+\bibitem{dkw2008}
+V.~D'Silva, D.~Kroening, and G.~Weissenbacher.
+\newblock A survey of automated techniques for formal software verification.
+\newblock {\em IEEE Transactions on Computer-Aided Design of Integrated
+  Circuits and Systems (TCAD)}, 27(7):1165--1178, July 2008.
+
+\bibitem{lhee}
+K.-S. Lhee and S.~J. Chapin.
+\newblock Buffer overflow and format string overflow vulnerabilities.
+\newblock {\em Softw. Pract. Exper.}, 33:423--460, April 2003.
+
+\bibitem{Younan04codeinjection}
+Y.~Younan, W.~Joosen, and F.~Piessens.
+\newblock Code injection in {C} and {C++} : A survey of vulnerabilities and
+  countermeasures.
+\newblock Technical report, Departement Computerwetenschappen, {Katholieke
+  Universiteit Leuven}, 2004.
+
+\end{thebibliography}

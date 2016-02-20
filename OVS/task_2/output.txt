@@ -1,0 +1,13 @@
+~/Dropbox/OVS/task_2$ cbmc --pointer-check --bounds-check stack_int.c
+
+size of program expression: 85007 assignments
+simple slicing removed 7 assignments
+Generated 18748 VCC(s), 18745 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT2 without simplifier
+328294 variables, 222467 clauses
+SAT checker inconsistent: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 56.254s
+VERIFICATION SUCCESSFUL
+

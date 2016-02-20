@@ -1,0 +1,39 @@
+\section*{Task~8}
+\addcontentsline{toc}{section}{Task 8}
+As mentioned in Task~7, the vulnerability is in the name element of an address when printed using \texttt{print\_addr}. Thus an attacker can chose to add an address book entry (`a') with a carefully chosen string with control arguments for the name (e.g., to crash the program or to view the stack contents) and then execute the list entries command (`l').
+
+For example, the following commands result in a crash of the address book program due to a \emph{Segmentation fault}.
+\begin{lstlisting}
+int main (int argc, char **argv)
+{
+  /* list initialisation */
+  struct list *list = list_new ();
+  if (!list) { abort(); }
+  (...)
+  struct address *address1 = malloc (sizeof(struct address));
+  if(!address1) { printf("failed to allocate memory for an address element\n"); abort(); }
+  address1->name    = "%n %n %n %n";
+  address1->address = "test address";
+  address1->phone   = "0123456789";
+  
+  list_append(list, address1);
+  list_addrs (list);
+
+  (...)
+}
+\end{lstlisting}
+
+
+Additionally there is a problem in the following function:
+\begin{lstlisting}
+void del_addr (struct list *list)
+{
+  (...)
+  unsigned int i, n;
+  printf ("delete #: ");
+  tmp = input (INPUT_BUF_SIZE);
+  n = atoi (tmp); //undefined behavior possible or unwanted behavior
+  (...)
+}
+\end{lstlisting}
+The user can provide a non-valid number for the entry he wishes to remove, and $n$ will be set to 0 (\texttt{atoi} does not support error reporting, so a valid zero cannot be distinguished), which will result in the deletion of the first element. Also, the user can give a number string such as `99999999999999999999999' causing an integer overflow which will result in undefined behavior (e.g., crash, random number, \ldots). This security vulnerability should probably be fixed by using \texttt{strtol} which provides error checking.\footnote{See \url{http://stackoverflow.com/questions/3420629/}} This was not done because this was not detected by \texttt{cbmc}.

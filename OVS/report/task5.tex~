@@ -1,0 +1,10 @@
+\section*{Task 5}
+\addcontentsline{toc}{section}{Task 5}
+As a first guideline we would suggest to write enough assert statements. When using \texttt{cbmc} for writing safe C code, it is a good practice to use a custom \texttt{malloc} instrumentation to also test the program in presence of memory allocation failures. The use of a counter variable to count the number of \texttt{malloc}s and \texttt{free}s also detects memory leaks. It is recommended to test the code regularly during the development phase, since memory leaks are very common in C programs and very hard to find. 
+%Checking for memory leaks should be done regularly, since, as we experienced it, they can arise very easily in C-code (and can often be hard to find).
+
+The counterexamples given by \texttt{cbmc} are somewhat difficult to interpret but when analyzed carefully they provide good insight in somewhat subtle bugs (as we experienced personally for memory leaks in the address book application). Memory leaks can be spotted by examining the trace of the counterexample by searching memory (de)allocations that aren't followed by a changing counter.
+
+
+As a final note, we should note that the approach to manually run \texttt{cbmc} with the different options is very tedious. Using scripts of course can alleviate this problem, but ultimately, a tight integration with an IDE is invaluable for the development progress\footnote{We also did not manage to get the \texttt{cbmc} plugin for Eclipse working.} of real-world complex applications. \texttt{cbmc} still has some obscure bugs and quirks such as the fixes needed for \texttt{strdup} or the multiple dereference problem. Nevertheless, using \texttt{cbmc} (as any other verification tool) forces the programmer to more carefully think about the code and its potential problems, and helps finding possible vulnerabilities and bugs.
+

@@ -1,0 +1,13 @@
+Violated property:
+  file addrbook.c line 244 function list_addrs
+  assertion list
+  FALSE
+
+VERIFICATION FAILED
+
+print_addr: fixed NULL pointer dereference
+cmp_addr: fixed NULL pointer dereference addr
+del_addr: fixed NULL pointer dereference list
+list_addrs: fixed NULL pointer dereference list
+search_addr: fixed NULL pointer dereference list
+*input_addr: fixed NULL pointer dereference address

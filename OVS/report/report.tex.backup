@@ -1,0 +1,51 @@
+\documentclass[a4paper,english,11pt,]{scrartcl}
+\usepackage{mystyle}
+
+\title{OVS Project}
+\subtitle{Finding Security Vulnerabilities with CBMC}
+\author{Stefan Diels\and Philippe Tanghe\and Li Quan}
+%\subject{Verslag}
+\date{}
+%\bibliographystyle{abbrv}
+
+
+\begin{document}
+\maketitle
+%\begin{abstract}
+
+%\end{abstract}
+%\tableofcontents
+
+\input{task1.tex}
+\input{task2.tex}
+\input{task3.tex}
+\input{task4.tex}
+\input{task5.tex}
+
+\input{task6.tex}
+\input{task7.tex}
+\input{task8.tex}
+\input{task9.tex}
+
+
+
+
+
+\clearpage
+
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+%\bibliography{biblio}
+
+
+\end{document}
+
+
+	
+

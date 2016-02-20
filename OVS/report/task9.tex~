@@ -1,0 +1,54 @@
+\section*{Task 9}
+\addcontentsline{toc}{section}{Task 9}
+We already knew some software testing techniques such as unit testing, and more in general software development as a process, including test cycles, requirements/security analysis, \ldots
+
+Previously, for formal verification we only had real experience with (symbolic) model checkers such as NuSMV \url{http://nusmv.fbk.eu/}. The advantage of those tools that verification of very complex properties can be done, and counterexamples can be given which provide valuable insight in subtle bugs; however they are quite difficult to work with and are not immediately usable for general purpose languages. 
+%This technique was more difficult to use as it had to be done in a separate language. These kind of tools are thus also more suitable as a basis for other verification tools. 
+Tools such as \texttt{splint} need annotations to work properly, and therefore require considerable more effort of the programmer.
+We also tried to use \texttt{valgrind}, but failed to detect the memory leak as found in Task~4, probably due to faulty usage.
+
+It is important to note that all verification techniques are currently an important topic of research. While some of these tools are very mature and really usable, others are very user-unfriendly and have bad support. Thus these tools should not only be able to detect many kinds of potential vulnerabilities, but they should do it with a low false positive rate, be scalable for real-world applications and give a good explanation or even a solution.
+
+A very nice and comprehensive overview of the different verification techniques and their advantages and disadvantages is given in~\cite{dkw2008}:
+\begin{quote}
+\small
+Static analysis techniques based on abstract interpretation
+scale well at the cost of limited precision, which manifests
+itself in a possibly large number of false warnings. The tool
+support is mature. 
+
+Model Checking tools that use abstraction
+can check complex safety properties, and are able to generate
+counterexamples. Bounded Model Checkers are very strong at
+detecting shallow bugs, but are unable to prove even simple
+properties if the program contains deep loops. 
+
+The model checking-based tools for software are less robust than static
+analysis tools and the market for these tools is in its infancy.
+
+The challenges for future research in software analysis are dynamically allocated data structures,
+shared-variable concurrency, and the environment problem.
+
+None of the tools we survey is able to assert even trivial
+properties of dynamically allocated data structures, despite the
+large body of (theoretical) research in this area. Similarly,
+concurrency has been the subject of research for decades,
+but the few tools that analyze programs with shared-variable
+concurrency still scale poorly. 
+
+Any formal analysis requires a
+formal model of the design under test---in case of software,
+this model often comprises a non-trivial environment that
+the code runs in (libraries, other programs, and hardware
+components). As programs often rely on properties of this
+environment, substantial manual effort is required to model
+these parts of the environment.
+\end{quote}
+
+In summary, all these tools make different trade-offs between coverage, soundness, usability, performance, \ldots
+Programmers should not blindly trust these formal verification tools: a successfully verified program can still have severe problems, and sometimes false positives are given. \emph{A fool with a tool is still a fool.} 
+
+
+
+
+

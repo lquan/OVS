@@ -1,0 +1,16 @@
+\section*{Task 7}
+
+
+Following is a format string vulnerability and is easily fixed:
+\begin{lstlisting}
+void print_addr (struct address *addr)
+ {
+  assert(addr);
+  //printf (addr->name); printf("; ");  //format string vulnerability
+  //printf ("%s; %s\n", addr->address, addr->phone);
+  
+  printf ("%s; %s; %s\n", addr-> name, addr->address, addr->phone);
+ }
+\end{lstlisting}
+
+

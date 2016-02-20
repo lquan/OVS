@@ -1,0 +1,25 @@
+\section*{Task 3}
+\addcontentsline{toc}{section}{Task 3}
+We extracted the doubly-linked list of the address book application. To test this implementation, we changed the data structure to use integers as data and used the same test harness as in Task~2. This avoids testing the whole address book application, as the address book application in essence is just this data structure with some higher-level address book helper functions.
+
+\begin{lstlisting}
+struct list_element {
+ struct list_element *prev;
+ struct list_element *next;
+ int data; // changed struct address pointer to integer data
+};
+\end{lstlisting}
+
+We have also applied the workaround to avoid multiple dereferences in one assignment by introducing temporary variables, e.g., 
+\begin{lstlisting}
+//elem->prev->next = elem->next;
+struct list_element *elem_prev_element = elem->prev;
+elem_prev_element->next = elem->next;
+\end{lstlisting}
+
+This finally results in a successfully verified program using all options: 
+\begin{Verbatim}[formatcom=\color{red}]
+cbmc -D __VERIFY --unwind 9 dllist.c --pointer-check --bounds-check
+\end{Verbatim} 
+The same problem with scalability as in Task~2 arises, so therefore only a small number of elements were tested (e.g., $n=8$ takes about 2 minutes).
+

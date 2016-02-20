@@ -1,0 +1,21 @@
+\section*{Task 7}
+\addcontentsline{toc}{section}{Task 7}
+The following code fragment contained a format string vulnerability and was easily fixed:
+\begin{lstlisting}
+void print_addr (struct address *addr)
+ {
+  assert(addr);
+  //printf (addr->name); printf("; ");  //format string vulnerability
+  //printf ("%s; %s\n", addr->address, addr->phone);
+  
+  printf ("%s; %s; %s\n", addr->name, addr->address, addr->phone);
+ }
+\end{lstlisting}
+
+The following macro contained a possible format string bug if used incorrectly by the programmer (\verb|printf(tag)|). However all uses in the program are internally and pass a literal string, so this fix is not really needed as opposed to the previous one (also see Task~8).
+\begin{lstlisting}
+#define get_string(tag, dst) { printf("%s", tag); (...) }
+\end{lstlisting}
+
+
+

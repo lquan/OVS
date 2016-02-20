@@ -1,0 +1,10 @@
+\select@language {english}
+\contentsline {section}{Task 1}{2}{section*.2}
+\contentsline {section}{Task 2}{5}{section*.3}
+\contentsline {section}{Task 3}{7}{section*.4}
+\contentsline {section}{Task 4}{8}{section*.5}
+\contentsline {section}{Task 5}{9}{section*.6}
+\contentsline {section}{Task 6}{10}{section*.7}
+\contentsline {section}{Task 7}{10}{section*.8}
+\contentsline {section}{Task 8}{11}{section*.9}
+\contentsline {section}{Task 9}{11}{section*.10}

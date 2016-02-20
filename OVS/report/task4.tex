@@ -1,0 +1,147 @@
+\section*{Task 4}
+\addcontentsline{toc}{section}{Task 4}
+We limit the buffer size to 4 so that we can easily set a small global loop bound of 5:
+\begin{Verbatim}[formatcom=\color{red}]
+cbmc addrbook.c -D __VERIFY 
+     --unwind 5 --no-unwinding-assertions
+     --pointer-check --bounds-check 
+\end{Verbatim}
+
+\begin{Verbatim}[fontsize=\footnotesize]
+Violated property:
+  file addrbook.c line 81 function input
+  array `buf' upper bound
+  (long int)i < 4
+\end{Verbatim}
+This problem arises when the null character is written at index $i$ equal to \verb|INPUT_BUF_SIZE| exceeding the length of the array, and was fixed by adjusting the while loop condition. We also rewrote the function somewhat to improve readability and remove the need to check the \verb|c!='\n'| condition twice. 
+
+\begin{lstlisting}
+char *input (int n)
+{
+  static char buf[INPUT_BUF_SIZE];
+  char c;
+  int i = 0;
+  while ( i <= n && i < (INPUT_BUF_SIZE - 1) ) //fixed buffer overflow vulnerability
+   { 
+     c = getchar();
+     printf ("%c", c);
+     if (c != '\n' ) { buf[i] = c; i++; } 
+     else { break; } // we can immediately break out of the loop
+   }
+
+  buf[i] = '\0';
+
+  return (buf);
+}
+\end{lstlisting}
+
+The second problem is a memory leak which occurs when an address entry is created successfully (by \texttt{input\_addr})  but cannot be appended to the list. This could not be known to the caller of \texttt{list\_append} and consequently, the allocated memory for the address entry was not freed.
+\begin{Verbatim}[fontsize=\footnotesize]
+Violated property:
+  file addrbook.c line 396 function main
+  assertion counter == 0
+  FALSE
+\end{Verbatim}
+We chose to fix this problem by letting the function \texttt{list\_append} return a success code so that the caller can free the previously created element if needed.
+
+\begin{lstlisting}
+int list_append (struct list *list, struct address *addr)
+{
+  (...)
+  struct list_element *elem = list_new_elem(addr);
+  if (!elem) { return 0; } //failed to create list element from address element
+
+  (...)
+  return 1; //successfully added address element
+}
+
+int main (int argc, char **argv)
+{
+  (...)
+  while (c != 'q')
+  {
+    (...)
+    switch (c) {
+     case 'a':   struct address *addr = input_addr();
+                 if (addr) {
+                    if (!list_append (list, addr)) {
+                        my_free(addr->name);
+                        my_free(addr->address);
+                        my_free(addr->phone);
+                        my_free(addr); 
+                    }
+                 }
+                 break; 
+    (...)
+    }
+  }
+
+  /* cleanup */
+  list_release (list);
+  (...)
+  assert(counter == 0);
+  return (0);
+}
+\end{lstlisting}
+
+
+
+
+
+% \verb|cbmc addrbook.c --unwind 5 --no-unwinding-assertions --pointer-check| detected the following \texttt{NULL} pointer dereferences.
+
+% \begin{verbatim}
+% Violated property:
+%   file addrbook.c line 316 function cmp_addr
+%   dereference failure: NULL pointer
+%   !(addr == NULL)
+% \end{verbatim}
+
+% 
+% \begin{lstlisting}
+% void search_addr (struct list *list)
+% {
+%   if (!list) { return; }
+%   (...)
+% }
+% 
+% void del_addr (struct list *list)
+% {
+%   if (!list) { return; }
+%   struct list_element *elem = list->first;
+%   (...)
+% }
+% 
+% void list_addrs (struct list *list)
+% {
+%   if(!list) { return; }
+%   struct list_element *elem = list->first;
+%   (...)
+% }
+% 
+% int cmp_addr (struct address *addr, char *str)
+% {
+%   if (!addr) { return 0; } //fixed null pointer dereference
+%   (...)
+% }
+% 
+% 
+% void print_addr (struct address *addr)
+% {
+%   if(!addr) { return; } //fixed null pointer dereference
+%   (...)
+% }
+% \end{lstlisting}
+
+
+%%%%%%%
+%%%%%%%
+%% Command above doesn't use -D __VERIFY!! probleem bij verification bij taak 4 was dat met de verify optie er geen probleem was, zonder de verify optie moest de if(!addr) erbij (zie hierboven).
+%% Maar dat lag daar aan het feit dat je de verkeerde malloc gebruikt. Vertrekkende van taak 1 (zoals hier in't verslag) zou er mss wel een fout zijn zonder de if(!addr),
+%% let wel dan op dat er gebruik gemaakt moet worden van -D __VERIFY
+%%%%%%%
+%%%%%%%
+
+
+
+

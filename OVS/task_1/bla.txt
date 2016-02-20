@@ -1,0 +1,32 @@
+cbmc addrbook.c --unwind 5 --no-unwinding-assertions --pointer-check --bounds-check
+Violated property:
+  file addrbook.c line 316 function cmp_addr
+  dereference failure: NULL pointer
+  !(addr == NULL)
+  
+  
+cbmc addrbook.c --unwind 5 --no-unwinding-assertions --pointer-check --bounds-check -D ___VERIFY
+Violated property:
+  file addrbook.c line 318 function cmp_addr
+  dereference failure: NULL pointer
+  !(addr == NULL)
+  
+cbmc addrbook.c --function input  --bounds-check --unwind 11
+INPUT_BUFF_SIZE op 10 gezet  
+Violated property:
+  file addrbook.c line 84 function input
+  array `buf' upper bound
+  (long int)i < 10
+
+cbmc addrbook.c --unwindset c::input.0:11,c::list_release.0:6,c::strlen.0:15,c::strcpy.0:15,c::input_addr.0:15,c::input_addr.1:2,c::input_addr.2:15,c::input_addr.3:15,c::input_addr.4:2,c::input_addr.5:15,c::input_addr.6:15,c::input_addr.7:2,c::input_addr.8:15,c::list_addrs.0:6,c::del_addr.0:6,c::search_addr.0:6,c::main.0:5 --bounds-check --pointer-check -D __VERIFY
+size of program expression: 36821 assignments
+simple slicing removed 25 assignments
+Generated 15558 VCC(s), 14894 remaining after simplification
+Passing problem to propositional reduction
+Running propositional reduction
+Solving with MiniSAT2 without simplifier
+6119941 variables, 20973367 clauses
+SAT checker: negated claim is UNSATISFIABLE, i.e., holds
+Runtime decision procedure: 513.539s
+VERIFICATION SUCCESSFUL
+
